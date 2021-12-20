@@ -25,6 +25,8 @@ Then in buildozer.spec set
 
 No other camera specific buildozer.spec changes are required.
 
+Note: The implementation of the gradle dependencies is architecture specific, an app built for armeabi-v7a will crash on an arm64-v8a device.
+
 # Behavior
 
 This hook adds the following buildozer.spec options to the build:
