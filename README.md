@@ -3,13 +3,15 @@ camerax_provider
 
 An Android camera provider for Camera4Kivy.
 
-# Install
 
 Camera4Kivy depends on the 'master' version of Buildozer. Currently `1.2.0.dev0`
 
 `pip3 install git+https://github.com/kivy/buildozer.git`
 
-To add a camera provider and a recipe to an Android project that uses Camera4Kivy:
+
+# Install
+
+To add a camera provider to an Android project that uses Camera4Kivy:
 
 `cd <project directory>`
 
@@ -17,12 +19,23 @@ To add a camera provider and a recipe to an Android project that uses Camera4Kiv
 
 `rm -rf camerax_provider/.git`
 
+Then in buildozer.spec set
 
-# Contents
+`p4a.hook = camerax_provider` 
 
-`gradle_options.py` sets
+No other camera specific buildozer.spec changes are required.
+
+# Behavior
+
+This hook adds the following buildozer.spec options to the build:
 
 `android.enable_androidx = True`
+
+`android.permissions = CAMERA, RECORD_AUDIO`
+
 `android.gradle_dependencies = ` as required for camerax
 
-`recipes/camera4kivy/` contains the camerax implementation
+`android.add_src = camerax_provider/camerax_src`
+
+The implementation is via a p4a hook so Buildozer is not required.
+
