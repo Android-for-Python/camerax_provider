@@ -8,6 +8,7 @@ Camera4Kivy depends on the 'master' version of Buildozer. Currently `1.2.0.dev0`
 
 `pip3 install git+https://github.com/kivy/buildozer.git`
 
+The current version is 0.0.3
 
 # Install
 
@@ -39,5 +40,5 @@ This hook adds the following buildozer.spec options to the build:
 
 `android.add_src = camerax_provider/camerax_src`
 
-The implementation is via a p4a hook so Buildozer is not required.
+
 
