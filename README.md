@@ -3,6 +3,7 @@ camerax_provider
 
 An Android camera provider for Camera4Kivy.
 
+**2023-11-13 This repository is archived.**
 
 Camera4Kivy depends on the 'master' version of Buildozer. Currently `1.2.0.dev0`
 
